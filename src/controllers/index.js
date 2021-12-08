@@ -58,6 +58,7 @@ class Controller {
      * @returns {string}   modified error message based on error code
      */
     static mongoErrorMessage({ error }) {
+
         const { name, code, keyPattern } = error;
 
         if (name === 'MongoError' && code && code === 11000) {

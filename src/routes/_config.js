@@ -6,13 +6,17 @@
 const router = require('express').Router();
 const { handle404, handleError, setupRequest, processResponse } = require('../middlewares/http');
 
+
 /** Models Route Handlers */
 const sampleRouteHandler = require('./sample');
+const userRouteHandler = require('./user')
+const ticketRouteHandler = require('./ticket')
 const logsRouterHandler = require('./externalLogger');
 
 /** Cross Origin Handling */
 router.use(setupRequest);
-router.use('/samples', sampleRouteHandler);
+router.use('/users', userRouteHandler)
+router.use('/ticket', ticketRouteHandler)
 router.use(processResponse);
 
 /** Static Routes */

@@ -6,7 +6,7 @@
 
 const RootService = require('../_root');
 const { buildQuery, buildWildcardOptions } = require('../../utilities/query');
-const { createSchema, updateSchema } = require('../../validators/sample');
+const { createSchema, updateSchema } = require('../../validators');
 
 /**
  *
